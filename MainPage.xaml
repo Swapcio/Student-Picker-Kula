@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentTestPicker.MainPage"
+             Title="Dodawanie i wybieranie klas do modyfikacji"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            >
+
+            <HorizontalStackLayout>
+                <Label Text="Wybieranie do odpowiedzi" StyleClass="TitleLabel"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Editor HeightRequest="10" Placeholder="Numer klasy" x:Name="ClassNumber"/>
+                <Button Text="Dodaj" Clicked="Add_Class" StyleClass="addButton"/>
+            </HorizontalStackLayout>
+
+            <CollectionView x:Name="classCollection"
+                         ItemsSource="{Binding Classes}"
+                         Margin="20"
+                         SelectionMode="Single"
+                         SelectionChanged="classCollection_SelectionChanged"
+                            >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout x:Name="classFrame">
+                            <Label Text="{Binding ClassNumber}"  x:Name="classroomName" />
+                            <Button Text="Usuń klase" Clicked="Delete_Class_Button_Clicked" x:Name="deleteClass"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

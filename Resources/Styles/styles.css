@@ -1,0 +1,86 @@
+^shell {
+    -maui-shell-background: #33332B;
+    -maui-shell-title: #6D7039;
+    text-align: center;
+}
+
+^contentpage {
+    background-color: #45462F;
+}
+
+
+^contentview {
+    background-color:black;
+    border-color:greenyellow;
+    border-radius:50;
+}
+
+formInput>button{
+    margin-left: 50;   
+}
+
+.formInput > editor {
+    background-color: #ED7905;
+    width: 250;
+    color: black;
+
+}
+
+.HorizontalStudent > label {
+    margin: 50;
+}
+
+
+#backButton {
+    background-color: darkred;
+    width:250;
+    height:80;
+    color:azure;
+    float: right;
+    
+}
+
+#Losowanie {
+    background-color: cornflowerblue;
+    width: 250;
+    height: 80;
+    color: azure;
+    float: right;
+
+}
+
+
+.addButton {
+    background-color: forestgreen;
+    width: 250;
+    height: 80;
+    color: azure;
+    float: right;
+}
+
+.deleteButton {
+    background-color: indianred;
+    color: black;
+    width: 150;
+    height:50;
+}
+
+#deleteClass {
+    background-color: #BDC523;
+    margin-top: 50;
+    color: black;
+    width: 50px;
+}
+#classFrame {
+    background-color: #6D7039;
+    height: 200;
+    width: 400;
+    text-align: center;
+    color: #45462F;
+}
+* {
+    letter-spacing: 1;
+}
+
+
+
